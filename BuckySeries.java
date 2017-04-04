@@ -24,8 +24,24 @@ public class BuckySeries {
         for(String y: morethings)
             list2.add(y);
         
+        //print out list1
         for (int i = 0; i < list1.size(); i++) {
             System.out.printf("%s ", list1.get(i));
+            
+          editlist(list1,list2);
+            System.out.println();
+             
+            for (int i = 0; i < list1.size(); i++) {
+            System.out.printf("%s ", list1.get(i));
+             }
         }
+        
+            public static void editlist(Collection<String> L1, Collection<String>L2){
+        
+        Iterator<String> it = L1.iterator();
+        while(it.hasNext()) {
+            if (L2.contains(it.next())) {
+                it.remove();
+            }
     }
 }
